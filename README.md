@@ -14,34 +14,34 @@ Medzi hlavné výhody patria:
 
 Aplikácia je postavená na trojvrstvovej architektúre, ktorá pozostáva z JavaFX frontend klienta, Spring Boot backendu a MySQL databázy. Súbory sa ukladajú lokálne na serveri. Komunikácia prebieha cez REST API a WebSocket.
 
-┌────────────────────────┐
-│ JavaFX Client │
-│ - UI │
-│ - REST komunikácia │
-│ - WebSocket klient │
-└───────────┬────────────┘
-
-
-
-▼
-┌──────────────────────────┐
-│ Spring Boot │
-│ (Backend Server) │
-│ │
-│ Controllers (REST/WS) │
-│ ┌────────────────────┐ │
-│ │ Service vrstva │ │
-│ └────────────────────┘ │
-│ ┌────────────────────┐ │
-│ │ Repository vrstva │ │
-│ └────────────────────┘ │
-│ │
-└─────────────┬────────────┘
-│ JPA / SQL
-┌──────────────────────┴─────────────────────┐
-▼ ▼
-┌──────────────────────┐ ┌────────────────────────┐
-│ MySQL DB │ │ Lokálne úložisko │
-│ - úlohy, skupiny │ │ - nahrané súbory │
-│ - používatelia │ │ - materiály │
-└──────────────────────┘ └────────────────────────┘
+<diagram>
+                    ┌────────────────────────┐
+                    │      JavaFX Client     │
+                    │  - UI                  │
+                    │  - REST komunikácia    │
+                    │  - WebSocket klient    │
+                    └───────────┬────────────┘
+                                │ REST / WS
+                                ▼
+                   ┌──────────────────────────┐
+                   │       Spring Boot        │
+                   │     (Backend Server)     │
+                   │                           │
+                   │  Controllers (REST/WS)    │
+                   │  ┌────────────────────┐   │
+                   │  │   Service vrstva   │   │
+                   │  └────────────────────┘   │
+                   │  ┌────────────────────┐   │
+                   │  │ Repository vrstva  │   │
+                   │  └────────────────────┘   │
+                   │                           │
+                   └─────────────┬─────────────┘
+                                 │ JPA / SQL
+          ┌──────────────────────┴──────────────────────┐
+          ▼                                             ▼
+┌────────────────────────┐                  ┌────────────────────────┐
+│        MySQL DB        │                  │   Lokálne úložisko     │
+│  - úlohy, skupiny      │                  │  - nahrané súbory      │
+│  - používatelia        │                  │  - študijné materiály  │
+└────────────────────────┘                  └────────────────────────┘
+</diagram>
