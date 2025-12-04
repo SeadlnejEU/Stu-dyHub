@@ -20,7 +20,9 @@ Aplikácia je postavená na trojvrstvovej architektúre, ktorá pozostáva z Jav
 │ - REST komunikácia │
 │ - WebSocket klient │
 └───────────┬────────────┘
-│ REST / WS
+
+
+
 ▼
 ┌──────────────────────────┐
 │ Spring Boot │
