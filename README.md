@@ -46,7 +46,7 @@ Aplikácia je postavená na trojvrstvovej architektúre, ktorá pozostáva z **J
 ┌──────────────────────┐                    ┌────────────────────────┐
 │       MySQL DB       │                    │  Lokálne úložisko      │
 │  - úlohy, skupiny    │                    │  - nahrané súbory      │
-│  - používatelia      │                    │  - materiály            │
+│  - používatelia      │                    │  - materiály           │
 └──────────────────────┘                    └────────────────────────┘
 ```
 
@@ -120,12 +120,12 @@ Aplikácia je postavená na trojvrstvovej architektúre, ktorá pozostáva z **J
 │────────────────│
 │ id(PK)         │
 │ uploader_id(FK)│
-│ fileName │
-│ fileType │
-│ fileData │
-│ mimeType │
-│ uploaded_at │
-└───────┘
+│ fileName       │
+│ fileType       │
+│ fileData       │
+│ mimeType       │
+│ uploaded_at    │
+└────────────────┘
 
 ┌───────┐       ┌─────────────┐
 │ tasks │1     N│ task_assignees│
@@ -201,7 +201,7 @@ src/main/java/me/seadlnej/server/
  ├── model/          # Entities (Task, TaskAssignee, TaskSteps, ...)
  ├── repository/     # JPA repositories
  ├── service/        # Business logic
- └── dto/            # Request/response models
+ └── requests/            # Request/response models
 ```
 
 ## 📝 Entities Overview
