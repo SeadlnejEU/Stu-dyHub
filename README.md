@@ -265,5 +265,3 @@ Use Postman, Insomnia, or any REST client to test the `/tasks` endpoints.
 This project is open-source and free to use.
 
 ---
-
-If chceš, môžem README rozšíriť o obrázky, API tabuľky, databázový ERD alebo inštalačný postup.
